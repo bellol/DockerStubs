@@ -1,0 +1,13 @@
+{
+  "name": "testerino",
+  "version": "1.0.0",
+  "description": "Stubbing me some JSON",
+  "author": "Wilhelm Eek",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.13.3"
+  }
+}

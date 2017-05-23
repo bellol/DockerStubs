@@ -10,7 +10,6 @@ COPY . /usr/src/app
 
 RUN npm install
 
-# Run Mountebank
 EXPOSE 8080
 
 CMD [ "npm", "start" ]

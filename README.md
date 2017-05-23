@@ -1,1 +1,1 @@
-testerino
+Dockerized Stubs to run alongside .NET APIs

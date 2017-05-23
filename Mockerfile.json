@@ -10,6 +10,17 @@
                     "message": "Hello there"
                 }
             }
+        },
+        {
+            "request": {
+                "path": "/addAccount",
+                "type": "POST"
+            },
+            "response": {
+                "body": {
+                    "message": "General Kenobi"
+                }
+            }
         }
     ]
 }

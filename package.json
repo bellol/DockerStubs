@@ -1,7 +1,7 @@
 {
-  "name": "testerino",
+  "name": "Mocker",
   "version": "1.0.0",
-  "description": "Stubbing me some JSON",
+  "description": "Mock Server",
   "author": "Wilhelm Eek",
   "main": "server.js",
   "scripts": {

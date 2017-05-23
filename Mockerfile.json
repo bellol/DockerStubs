@@ -1,0 +1,15 @@
+{
+    "cases": [
+        {
+            "request": {
+                "path": "/getAccounts",
+                "type": "GET"
+            },
+            "response": {
+                "body": {
+                    "message": "Hello there"
+                }
+            }
+        }
+    ]
+}

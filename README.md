@@ -10,5 +10,5 @@ Mock cases can be added to `Mockerfile.json`.
 
 ## TODO
 * Add request/response condition checking
-* Add POST/DELETE/PUT support
+* Add DELETE/PUT support
 * Add SOAP support

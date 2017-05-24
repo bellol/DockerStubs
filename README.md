@@ -13,9 +13,4 @@ npm start
 ```
 
 ## Configuration
-Mock cases can be added to `Mockerfile.json`. 
-
-## TODO
-* Add request/response condition checking
-* Add DELETE/PUT support
-* Add SOAP support
+Mock cases can be added to `Mockerfile.json`.

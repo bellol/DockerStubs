@@ -1,8 +1,10 @@
 'use strict';
-const express = require('express');
-const mocks = require('./Mockerfile');
-const app = express();
-const PORT = 8080;
+
+const express   = require('express');
+const mocks     = require('./Mockerfile');
+const chalk     = require('chalk');
+const app       = express();
+const PORT      = 8080;
 
 // Helpers
 const quote = (text) => "\"" + text + "\"";
@@ -11,20 +13,20 @@ const quote = (text) => "\"" + text + "\"";
 for (let mock of mocks.cases) {
     switch (mock.request.type) {
         case "GET":
-            console.log("SUCCESS:\tRegistered call of type " 
-                + quote(mock.request.type) + " and path " + quote(mock.request.path));
+            console.log(chalk.green("SUCCESS:\tRegistered call of type " 
+                + quote(mock.request.type) + " and path " + quote(mock.request.path)));
             app.get(mock.request.path, (req, res) => res.send(mock.response.body));
             break;
 
         case "POST":
-            console.log("SUCCESS:\tRegistered call of type " 
-                + quote(mock.request.type) + " and path " + quote(mock.request.path));
+            console.log(chalk.green("SUCCESS:\tRegistered call of type " 
+                + quote(mock.request.type) + " and path " + quote(mock.request.path)));
             app.post(mock.request.path, (req, res) => res.send(mock.response.body));
             break;
 
         default:
-            console.log("ERROR:\t\tCould not register call of type " 
-                + quote(mock.request.type) + " and path " + quote(mock.request.path));
+            console.error(chalk.red("ERROR:\t\tCould not register call of type " 
+                + quote(mock.request.type) + " and path " + quote(mock.request.path)));
             break;
     }
 }
@@ -32,4 +34,4 @@ for (let mock of mocks.cases) {
 
 // Go
 app.listen(PORT);
-console.log('DONE:\t\tListening on port ' + PORT);
+console.log('\nDONE:\t\tListening on port ' + PORT + "\n");

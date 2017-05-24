@@ -18,7 +18,18 @@
             },
             "response": {
                 "body": {
-                    "message": "General Kenobi"
+                    "message": "General Kenobi, you are a bold one!"
+                }
+            }
+        },
+        {
+            "request": {
+                "path": "/meme",
+                "type": "GET"
+            },
+            "response": {
+                "body": {
+                    "message": "DO IT"
                 }
             }
         }

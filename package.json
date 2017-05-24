@@ -1,12 +1,12 @@
 {
   "name": "Mocker",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Mock Server",
   "author": "Wilhelm Eek",
   "main": "server.js",
   "scripts": {
-    "start": "npm build && node server.js",
-    "build": "webpack --config ./webpack.config.js --progress --colors"
+    "start": "node server.js",
+    "prestart": "webpack --config ./webpack.config.js"
   },
   "dependencies": {
     "chalk": "^1.1.3",

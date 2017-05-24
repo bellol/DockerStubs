@@ -3,7 +3,9 @@ import React from 'react';
 export default class App extends React.Component {
     render() {
         return (
-            <div>Hello There</div>
+            <div className="main-container">
+                <div className="mocker-logo">Mocker</div>
+            </div>
         );
     }
 }

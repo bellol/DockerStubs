@@ -1,0 +1,16 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.mocker-logo {
+    font-family: 'Barrio', cursive;
+    font-size: 72px; 
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+}
+
+.main-container {
+    width: 100%;
+    height: 100%;
+}

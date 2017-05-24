@@ -14,22 +14,14 @@
         {
             "request": {
                 "path": "/addAccount",
-                "type": "POST"
+                "type": "POST",
+                "body": {
+                    
+                }
             },
             "response": {
                 "body": {
                     "message": "General Kenobi, you are a bold one!"
-                }
-            }
-        },
-        {
-            "request": {
-                "path": "/meme",
-                "type": "GET"
-            },
-            "response": {
-                "body": {
-                    "message": "DO IT"
                 }
             }
         }

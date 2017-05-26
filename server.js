@@ -1,22 +1,45 @@
 'use strict';
 
-const express   = require('express');
-const mocks     = require('./Mockerfile');
-const path      = require('path');
-const chalk     = require('chalk');
-const app       = express();
-const PORT      = 8080;
+const express    = require('express');
+const mocks      = require('./Mockerfile');
+const path       = require('path');
+const chalk      = require('chalk');
+const app        = express();
+const PORT       = 8080;
+const bodyParser = require('body-parser');
+
+app.use(bodyParser.json());
 
 // Helpers
 const quote = (text) => "\"" + text + "\"";
 
 registerMockerfileStubs();
+
+app.post("/mockerAdd", (request, response) => {
+
+    switch(request.body.method) {
+        case "POST":
+            response.send("Not yet supported tnx");
+            break;
+
+        case "GET":
+            app.get(request.body.endpoint, (req, res) => res.send(request.body.body));
+            break;
+
+        default:
+            response.send("My name is Jeff");
+    }
+
+    response.send("Added Endpoint");
+});
+
 registerGUI();
+
 app.listen(PORT);
 console.log('\nDONE:\t\tListening on port ' + PORT + "\n");
 
 function registerMockerfileStubs(){
-    // Register Calls from Mockerfile
+
     for (let mock of mocks.cases) {
         switch (mock.request.type) {
             case "GET":
